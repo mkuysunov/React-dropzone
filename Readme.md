@@ -35,7 +35,7 @@ export default function App() {
 
 ## Demo image
 
-<img align="center" width="500" height="410" src="https://github.com/mkuysunov/weather_react-redux/blob/main/TMP/project-pic.PNG">
+<img align="center" width="500" height="410" src="https://github.com/mkuysunov/Dropzone-react-dropzone-/blob/main/images/demo-image.png">
 
 ## API
 

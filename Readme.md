@@ -38,7 +38,7 @@ export default function App() {
 
 ## API
 
-component supports all react-dropzone framework attributes and additional below attributes
+** Component supports all react-dropzone framework attributes  and additional below attributes **
 
 | name     | type     | default     | description                                       |
 | -------- | -------- | ----------- | ------------------------------------------------- |

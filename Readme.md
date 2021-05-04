@@ -6,6 +6,8 @@ component dependencies (clsx, react-dropzone)
 
 **Firstly download zip and extract on your components folder.**
 
+**Installing packages**
+
 ```
 npm install clsx react-dropzone
 ```

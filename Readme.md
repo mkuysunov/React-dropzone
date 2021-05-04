@@ -47,33 +47,10 @@ export default function App() {
 </strong>  
 
 
-
-
-<table>
-        <thead>
-          <tr>
-            <th>name</th>
-            <th>type</th>
-            <th>default</th>
-            <th>description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>onUpload</td>
-            <td>function</td>
-            <td>undefined</td>
-            <td>this function works when you click upload button.</td>
-          </tr>
-          <tr>
-            <td>btnName</td>
-            <td>string</td>
-            <td>'Загрузить'</td>
-            <td>You can change upload button name.</td>
-          </tr>
-        </tbody>
-      </table>
-
+| name     | type     | default     | description                                       |
+| -------- | -------- | ----------- | ------------------------------------------------- |
+| onUpload | function | undefined   | this function works when you click upload button. |
+| btnName  | string   | 'Загрузить' | You can change upload button name.                |
 
 
 

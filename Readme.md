@@ -4,7 +4,7 @@ component dependencies (clsx, react-dropzone)
 
 ## Install:
 
-first download zip and paste inside components folder.
+**Firstly download zip and extract on your components folder.**
 
 ```
 npm install clsx react-dropzone
@@ -13,7 +13,6 @@ npm install clsx react-dropzone
 ## Usage:
 
 ```
-import { Box } from '@material-ui/core'
 import React from 'react'
 import { Dropzone } from './components/Dropzone/Dropzone'
 
@@ -26,9 +25,9 @@ export default function App() {
 
   // RENDER
   return (
-    <Box>
+    <div>
       <Dropzone onUpload={uploadFiles} multiple />
-    </Box>
+    </div>
   )
 }
 ```

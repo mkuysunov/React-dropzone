@@ -1,46 +1,46 @@
-import React, { useState } from 'react'
-import DropFiles from 'react-dropzone'
-import clsx from 'clsx'
-import classes from './Dropzone.module.css'
-import uploadIcon from './images/upload.png'
-import fileIcon from './images/file.svg'
+import React, { useState } from 'react';
+import DropFiles from 'react-dropzone';
+import clsx from 'clsx';
+import classes from './Dropzone.module.css';
+import uploadIcon from './images/upload.png';
+import fileIcon from './images/file.svg';
 
 export function Dropzone(props) {
-  const { onUpload, ...restDropOptions } = props
-  const [files, setFiles] = useState([])
+  const { onUpload, btnName = 'Загрузить файлы', ...restDropOptions } = props;
+  const [files, setFiles] = useState([]);
 
   const handleUpload = () => {
-    if (!files.length) return
-    onUpload(files)
-  }
+    if (!files.length) return;
+    onUpload(files);
+  };
 
   const handleOnChange = (acceptedFiles) => {
     if (restDropOptions.multiple) {
-      setFiles([...acceptedFiles, ...files])
-      return
+      setFiles([...acceptedFiles, ...files]);
+      return;
     }
-    setFiles(acceptedFiles)
-  }
+    setFiles(acceptedFiles);
+  };
 
   const handleRemoveFile = (fileIdx) => {
-    setFiles(files.filter((_, idx) => idx !== fileIdx))
-  }
+    setFiles(files.filter((_, idx) => idx !== fileIdx));
+  };
 
   function definingTheFileSize(fileSize) {
-    let fSExt = ['Bytes', 'KB', 'MB', 'GB']
-    let i = 0
+    let fSExt = ['Bytes', 'KB', 'MB', 'GB'];
+    let i = 0;
     while (fileSize > 900) {
-      fileSize /= 1024
-      i++
+      fileSize /= 1024;
+      i++;
     }
-    return Math.round(fileSize * 100) / 100 + ' ' + fSExt[i]
+    return Math.round(fileSize * 100) / 100 + ' ' + fSExt[i];
   }
 
   // RENDER
   return (
     <div className={classes['root']}>
       <button className={classes['upload-btn']} disabled={!files.length} onClick={handleUpload}>
-        Загрузить
+        {btnName}
       </button>
 
       <DropFiles onDrop={handleOnChange} {...restDropOptions}>
@@ -75,5 +75,5 @@ export function Dropzone(props) {
         ))}
       </div>
     </div>
-  )
+  );
 }

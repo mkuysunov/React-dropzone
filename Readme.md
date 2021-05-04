@@ -52,7 +52,6 @@ export default function App() {
 | name     | type     | default     | description                                       |
 | -------- | -------- | ----------- | ------------------------------------------------- |
 | onUpload | function | undefined   | this function works when you click upload button. |
-
 | btnName  | string   | 'Загрузить' | You can change upload button name.                |
 
 

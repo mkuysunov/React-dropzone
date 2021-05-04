@@ -38,7 +38,12 @@ export default function App() {
 
 ## API
 
-**Component supports all react-dropzone [attributes](https://react-dropzone.js.org/#src) and additional below attributes**
+<strong>
+  Component supports all react-dropzone 
+  <a href="https://react-dropzone.js.org/#src" target="_blank">attributes</a>
+  and additional below attributes
+</strong>  
+
 
 
 

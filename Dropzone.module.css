@@ -9,17 +9,17 @@
   display: inline-block;
   padding: 10px 20px;
   margin-bottom: 10px;
-  background: rgba(33,150,243, 0.8);
+  background: rgba(33, 150, 243, 0.8);
   color: #fff;
-  border:none;
+  border: none;
   cursor: pointer;
 }
 .upload-btn:hover {
-  background: rgba(33,150,243, 1);
+  background: rgba(33, 150, 243, 1);
 }
 .upload-btn:disabled {
   cursor: not-allowed;
-  background: rgba(33,150,243, 0.5);
+  background: rgba(33, 150, 243, 0.5);
 }
 
 .drop-box {
@@ -28,7 +28,7 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  border: 2px dashed rgba(33,150,243, 0.8);
+  border: 2px dashed rgba(33, 150, 243, 0.8);
   height: 200px;
   cursor: pointer;
 }
@@ -37,14 +37,14 @@
 }
 
 .drop-icon-box img {
- max-width: 80px;
+  max-width: 80px;
 }
 
 .drop-text-box {
   padding-top: 20px;
   text-align: center;
   font-weight: 500;
-  color: #6BB9F9;
+  color: #6bb9f9;
 }
 
 /* ------------------------------ file ------------------------------ */
@@ -52,12 +52,18 @@
   max-height: 300px;
   overflow-y: auto;
 }
-.file-container::-webkit-scrollbar{
-  width: 8px;
-  background:rgba(241,241,241);
+
+.file-container_scroll {
+  padding-right: 8px;
 }
-.file-container::-webkit-scrollbar-thumb {
-  background: rgba(193,193,193);
+
+.file-container_scroll::-webkit-scrollbar {
+  width: 7px;
+  background: rgba(241, 241, 241);
+}
+
+.file-container_scroll::-webkit-scrollbar-thumb {
+  background: rgba(193, 193, 193);
   border-radius: 3px;
 }
 
@@ -76,7 +82,7 @@
 
 .file-name {
   font-weight: 500;
-  color: #6BB9F9;
+  color: #6bb9f9;
   max-width: 300px;
   overflow: hidden;
   white-space: nowrap;
@@ -93,7 +99,7 @@
 .delete-file-btn {
   display: inline-block;
   padding: 4px 9px;
-  background: rgba(245,0,87, 0.8);
+  background: rgba(245, 0, 87, 0.8);
   border-radius: 50%;
   font-weight: 600;
   cursor: pointer;
@@ -101,5 +107,5 @@
   font-size: 14px;
 }
 .delete-file-btn:hover {
-  background: rgba(245,0,87, 1);
+  background: rgba(245, 0, 87, 1);
 }

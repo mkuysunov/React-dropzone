@@ -6,7 +6,7 @@ import uploadIcon from './images/upload.png';
 import fileIcon from './images/file.svg';
 
 export function Dropzone(props) {
-  const { onUpload, btnName = 'Загрузить файлы', ...restDropOptions } = props;
+  const { onUpload, ...restDropOptions } = props;
   const [files, setFiles] = useState([]);
 
   const handleUpload = () => {
@@ -15,10 +15,6 @@ export function Dropzone(props) {
   };
 
   const handleOnChange = (acceptedFiles) => {
-    if (restDropOptions.multiple) {
-      setFiles([...acceptedFiles, ...files]);
-      return;
-    }
     setFiles(acceptedFiles);
   };
 
@@ -40,7 +36,7 @@ export function Dropzone(props) {
   return (
     <div className={classes['root']}>
       <button className={classes['upload-btn']} disabled={!files.length} onClick={handleUpload}>
-        {btnName}
+        Загрузить
       </button>
 
       <DropFiles onDrop={handleOnChange} {...restDropOptions}>
@@ -60,7 +56,7 @@ export function Dropzone(props) {
         )}
       </DropFiles>
 
-      <div className={classes['file-container']}>
+      <div className={clsx(classes['file-container'], { [classes['file-container_scroll']]: files.length > 3 })}>
         {files.map((file, fileIdx) => (
           <div key={fileIdx} className={classes['file-box']}>
             <div className={classes['file-icon-box']}>
